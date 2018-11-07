@@ -10,7 +10,7 @@
 # go to control channel path of windows (panneau de configuration)
 # program and functionality
 # activate or deactivate Windows functionalities
-# select folder sub-system Liux for Windows
+# select folder sub-system Linux for Windows
 
 # go to the Microsoft store
 # search for ubuntu, download and install
