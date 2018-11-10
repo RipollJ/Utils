@@ -26,6 +26,9 @@ wget -o Log/miniconda.done -t 2 -nc --show-progress -P mnt/c/Users/Ripoll/Docume
 bash mnt/c/Users/Ripoll/Documents/Miniconda3-latest-Linux-x86_64.sh # install
 conda update conda # update
 
+# Install Anaconda
+conda install anaconda
+
 # Add channels
 conda config --add channels biopython
 conda config --add channels bioconda
@@ -48,6 +51,7 @@ sudo apt install xbase-clients
 
 # In Windows install Xming
 https://sourceforge.net/projects/xming/ # follow classical install
+# launch Xming with defaults values at each start of your computer
 
 # OR Install xvfb in linux (doesn't work for me)
 #sudo apt install xvfb
