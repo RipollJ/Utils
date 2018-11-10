@@ -29,7 +29,7 @@ conda update conda # update
 # Install Anaconda
 conda install anaconda
 
-# Add channels
+# Add channels, not always necessary
 conda config --add channels biopython
 conda config --add channels bioconda
 conda config --add channels conda-forge
