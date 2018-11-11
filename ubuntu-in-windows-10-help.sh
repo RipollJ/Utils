@@ -34,7 +34,7 @@ conda config --add channels biopython
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --show channels
-# if problems of error 404 page not found for biopython or conda-forge
+# if problems of error 404 page not found for channels
 #conda config --remove-key channels
 #conda config --append channels conda-forge --append channels bioconda
 
