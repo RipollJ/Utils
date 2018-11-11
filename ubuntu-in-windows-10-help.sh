@@ -34,7 +34,9 @@ conda config --add channels biopython
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --show channels
-#conda config --remove channels biopython # if problems of error 404 page not found for biopython, remove and reinstall #conda install biopython
+# if problems of error 404 page not found for biopython or conda-forge
+#conda config --remove-key channels
+#conda config --append channels conda-forge --append channels bioconda
 
 # Install snakemake
 conda install -c bioconda -c conda-forge snakemake
