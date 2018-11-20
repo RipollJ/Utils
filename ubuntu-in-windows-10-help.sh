@@ -69,4 +69,6 @@ gedit mnt/c/Users/Ripoll/Documents/Script_Ripoll/Sqlite_db.R # think to launch "
 
 # Now, you can work
 
+# for a Xfce interface follow the procedure of https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
+
 ### END
