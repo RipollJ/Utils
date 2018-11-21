@@ -62,10 +62,21 @@ https://sourceforge.net/projects/xming/ # follow classical install
 # Install an editor of code
 sudo apt install gedit # base editor of gnome
 
-# Open gedit script file
+# Open gedit bashrc file with xlaunch in multiple windows mode
 export DISPLAY:0
-gedit mnt/c/Users/Ripoll/Documents/Script_Ripoll/Sqlite_db.R # think to launch "Xming launch" at your next boot
-# quit the open windows to work
+gedit .bashrc
+
+# add export display to your bashrc
+# export display for Xfce 4
+export DISPLAY=:0.0
+
+# close bashrc and terminal and reload Xlaunch
+
+# change parameters of xlaunch to open Xfce environment emulator
+# one large window
+# start no client
+# select all options
+xfce4-session # enjoy
 
 # Now, you can work
 
