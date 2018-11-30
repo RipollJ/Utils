@@ -66,6 +66,8 @@ sudo apt install gedit # base editor of gnome
 export DISPLAY:0
 gedit .bashrc
 
+# for a Xfce interface follow the procedure of https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
+# or this:
 # add export display to your bashrc
 # export display for Xfce 4
 export DISPLAY=:0.0
@@ -83,6 +85,5 @@ xfce4-session # enjoy
 
 # Now, you can work
 
-# for a Xfce interface follow the procedure of https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
-
+##############
 ### END
