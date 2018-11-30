@@ -78,6 +78,9 @@ export DISPLAY=:0.0
 # select all options
 xfce4-session # enjoy
 
+# if necessary install thunar when you start the first session, close and reload session
+#sudo apt install thunar
+
 # Now, you can work
 
 # for a Xfce interface follow the procedure of https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
