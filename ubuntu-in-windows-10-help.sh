@@ -2,6 +2,14 @@
 ### Managing bash in Windows ###
 ################################
 
+# Author: JR
+# Update: 05/2019
+
+# Aim: installation of ubuntu for Windows with a graphical interface
+# Please read all comments for installation
+
+################################################################################
+# In Windows10:
 # go to parameters
 # update and security category
 # for developers
@@ -20,11 +28,57 @@ ls -a # see your root folder
 cd / # to quit root and search in windows folder
 ls mnt/c/Users/Ripoll/Documents # to see your documents
 
+################################################################################
+# Update install command
+sudo apt-get update
+
+ # Need xbase-clients
+sudo apt install xbase-clients
+
+################################################################################
+# In Windows install Xming
+https://sourceforge.net/projects/xming/ # follow classical install
+# launch Xming with defaults values at each start of your computer
+
+# OR Install xvfb in linux (doesn't work for me)
+#sudo apt install xvfb
+#Xvfb :0 -screen 0 1920x1080x24 +extension GLX -nolisten tcp -dpi 96
+
+# Install an editor of code gedit / emacs / etc...
+sudo apt install gedit # base editor of gnome
+
+# Open gedit bashrc file with xlaunch in multiple windows mode
+export DISPLAY:0
+gedit .bashrc
+
+# for a Xfce interface follow the procedure of 
+# https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
+# or this:
+# add export display to your bashrc
+# export display for Xfce 4
+export DISPLAY=:0.0
+
+# close bashrc and terminal and reload Xlaunch
+
+# change parameters of xlaunch to open Xfce environment emulator
+# one large window
+# start no client
+# select all options
+xfce4-session # enjoy
+
+# if necessary install thunar when you start the first session, 
+# close and reload session
+#sudo apt install thunar
+
+
+################################################################################
 # Install of conda
 # dl miniconda
 wget -o Log/miniconda.done -t 2 -nc --show-progress -P mnt/c/Users/Ripoll/Documents https://conda.io/miniconda.html
-bash mnt/c/Users/Ripoll/Documents/Miniconda3-latest-Linux-x86_64.sh # install
-conda update conda # update
+# install
+bash mnt/c/Users/Ripoll/Documents/Miniconda3-latest-Linux-x86_64.sh 
+# update conda
+conda update conda 
 
 # Install Anaconda
 conda install anaconda
@@ -42,48 +96,12 @@ conda config --show channels
 conda install -c bioconda -c conda-forge snakemake
 
 # Clone environment of previous work
-conda create -n Bioindic --clone mnt/c/Users/Ripoll/Documents/Article_Meta_bioindic/Ultra_Analyses/env/
+conda create -n Bioindic --clone mnt/c/Users/Ripoll/Documents/<PATH>/
 conda activate Bioindic # activate environment
 
-# Update install command
-sudo apt-get update
 
- # Need xbase-clients
-sudo apt install xbase-clients
-
-# In Windows install Xming
-https://sourceforge.net/projects/xming/ # follow classical install
-# launch Xming with defaults values at each start of your computer
-
-# OR Install xvfb in linux (doesn't work for me)
-#sudo apt install xvfb
-#Xvfb :0 -screen 0 1920x1080x24 +extension GLX -nolisten tcp -dpi 96
-
-# Install an editor of code
-sudo apt install gedit # base editor of gnome
-
-# Open gedit bashrc file with xlaunch in multiple windows mode
-export DISPLAY:0
-gedit .bashrc
-
-# for a Xfce interface follow the procedure of https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
-# or this:
-# add export display to your bashrc
-# export display for Xfce 4
-export DISPLAY=:0.0
-
-# close bashrc and terminal and reload Xlaunch
-
-# change parameters of xlaunch to open Xfce environment emulator
-# one large window
-# start no client
-# select all options
-xfce4-session # enjoy
-
-# if necessary install thunar when you start the first session, close and reload session
-#sudo apt install thunar
-
-# Now, you can work
+################################################################################
+# Now, you can work with conda and mutliple terminal
 
 ##############
 ### END
