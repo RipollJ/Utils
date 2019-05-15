@@ -13,7 +13,7 @@
 # select folder sub-system Linux for Windows
 
 # go to the Microsoft store
-# search for ubuntu, download and install
+# search for ubuntu, download and install the lastest stable version
 
 # open bash windows
 ls -a # see your root folder
