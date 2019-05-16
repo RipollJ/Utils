@@ -38,45 +38,41 @@ sudo apt install xbase-clients
 ################################################################################
 # In Windows install Xming
 https://sourceforge.net/projects/xming/ # follow classical install
-# launch Xming with defaults values at each start of your computer
-
-# OR Install xvfb in linux (doesn't work for me)
-#sudo apt install xvfb
-#Xvfb :0 -screen 0 1920x1080x24 +extension GLX -nolisten tcp -dpi 96
-
-# Install an editor of code gedit / emacs / etc...
-sudo apt install gedit # base editor of gnome
-
-# Open gedit bashrc file with xlaunch in multiple windows mode
-export DISPLAY:0
-gedit .bashrc
+# launch Xming each time you need to work in ubuntu xfce environment
 
 # for a Xfce interface follow the procedure of 
 # https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/
-# or this:
+
+# Installation of xfce4:
+# download and install xfce4 in terminal
+sudo apt install xfce4-session
 # add export display to your bashrc
-# export display for Xfce 4
+sudo apt isntall gedit
 export DISPLAY=:0.0
+gedit .bashrc
+# add the previous line code to bashrc
+# you can add this also
+# alias xfce='xfce4-session'
 
-# close bashrc and terminal and reload Xlaunch
+# install thunar for xfce
+sudo apt install thunar
 
+# close bashrc and terminal and launch Xlaunch
 # change parameters of xlaunch to open Xfce environment emulator
 # one large window
 # start no client
 # select all options
-xfce4-session # enjoy
 
-# if necessary install thunar when you start the first session, 
-# close and reload session
-#sudo apt install thunar
+# In new terminal:
+xfce4-session # or xfce if you add the alias in your bashrc
 
 
 ################################################################################
 # Install of conda
 # dl miniconda
-wget -o Log/miniconda.done -t 2 -nc --show-progress -P mnt/c/Users/Ripoll/Documents https://conda.io/miniconda.html
+wget -o Log/miniconda.done -t 2 -nc --show-progress -P Documents https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 # install
-bash mnt/c/Users/Ripoll/Documents/Miniconda3-latest-Linux-x86_64.sh 
+bash Documents/Miniconda3-latest-Linux-x86_64.sh 
 # update conda
 conda update conda 
 
@@ -96,7 +92,7 @@ conda config --show channels
 conda install -c bioconda -c conda-forge snakemake
 
 # Clone environment of previous work
-conda create -n Bioindic --clone mnt/c/Users/Ripoll/Documents/<PATH>/
+conda create -n Bioindic --clone Documents/<PATH>/
 conda activate Bioindic # activate environment
 
 
