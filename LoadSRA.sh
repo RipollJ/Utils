@@ -67,7 +67,7 @@ option=${3:-1}
 
 
 function fline {
-  cat $1 | parallel -j 2 "FastDump {}"
+  cat $1 | parallel -j $3 "FastDump {}"
 }; export -f fline
 
 
