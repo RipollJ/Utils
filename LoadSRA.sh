@@ -25,9 +25,45 @@
 # Caution: the double of the value given in threads will be used due to parallel
 # ListOfIds.txt: your file with SRA Identifiants to download, one file by raw
 
+
+usage="$(basename "$0") [-h] [-f n] [-t int] [-j int] 
+
+-- download SRA files faster using parallel programs --
+
+where:
+    -h  show this help text
+    -f  file containing ids, one by raw
+    -t  number of threads to use by process
+    -j  number of parallel processes"
+
+while getopts ':hftj:' option; do
+  case "$option" in
+    h) echo "$usage"
+       exit
+       ;;
+    f) filen=$1
+       ;;
+    t) threads=$2
+       ;;
+    j) pcore=$3
+       ;;
+    :) printf "missing argument for -%f\n" "$OPTARG" >&2
+       echo "$usage" >&2
+       exit 1
+       ;;
+   \?) printf "illegal option: -%f\n" "$OPTARG" >&2
+       echo "$usage" >&2
+       exit 1
+       ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+
 function fline {
   cat $1 | parallel -j 2 "FastDump {}"
 }; export -f fline
+
 
 function FastDump {
   prefetch -O ./ -X 999999999 $1
@@ -39,4 +75,8 @@ function FastDump {
   fi
 }; export -f FastDump
 
+
 fline $1
+
+#######################################################################
+#END
