@@ -14,6 +14,7 @@
 
 #######################################################################
 # Pre-requisite:
+   # require: parallel
    # Use: conda for installation (or not), sra-toolkits and parallel-fastq-dump
    # conda install -c bioconda sra-tools
    # conda install -c bioconda parallel-fastq-dump
@@ -58,6 +59,11 @@ while getopts ':hftj:' option; do
   esac
 done
 shift $((OPTIND - 1))
+
+
+# default options
+option=${2:-3}
+option=${3:-1}
 
 
 function fline {
