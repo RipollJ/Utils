@@ -30,7 +30,7 @@
 usage="$(basename "$0") 
 -- download SRA files faster using parallel programs --
 
-Usage: [-h] [-f n] [-t int] [-o n]
+Usage: $(basename "$0") [-h] [-f n] [-t int] [-o n]
 
 where:
     -h  edit help text
