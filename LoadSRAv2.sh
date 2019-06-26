@@ -27,12 +27,13 @@
 # ListOfIds.txt: your file with SRA Identifiants to download, one file by raw
 
 
-usage="$(basename "$0") [-h] [-f n] [-t int] [-o n]
-
+usage="$(basename "$0") 
 -- download SRA files faster using parallel programs --
 
+Usage: [-h] [-f n] [-t int] [-o n]
+
 where:
-    -h  show this help text
+    -h  edit help text
     -f  file containing ids, one by raw
     -t  number of threads to use
     -o  path to output directory"
@@ -72,10 +73,10 @@ function fline {
 
 
 function FastDump {
-  prefetch -O $3 -X 999999999 $1
+  prefetch -O ./ -X 999999999 $1
 
   if [[ -e ${1}.sra ]]; then
-    parallel-fastq-dump -s ${1}.sra -t $2 -O $3 --tmpdir $3 --split-3 --gzip && rm ${1}.sra
+    parallel-fastq-dump -s ${1}.sra -t $2 -O $3 --tmpdir ./ --split-3 --gzip && rm ${1}.sra
   else
     echo '[ERROR]' $1 'apparently not successfully loaded' && exit 1
   fi
