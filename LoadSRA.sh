@@ -22,7 +22,6 @@
 #######################################################################
 # droit execution: chmod +x LoadSRA.sh
 # execution ./LoadSRA.sh ListOfIds.txt {number of threads to use}
-# Caution: the double of the value given in threads will be used due to parallel
 # ListOfIds.txt: your file with SRA Identifiants to download, one file by raw
 
 
@@ -71,10 +70,10 @@ function fline {
 
 
 function FastDump {
-  prefetch -O ./ -X 999999999 $1
+  prefetch -O $3 -X 999999999 $1
 
   if [[ -e ${1}.sra ]]; then
-    parallel-fastq-dump -s ${1}.sra -t $2 -O $3 --tmpdir ./ --split-3 --gzip && rm ${1}.sra
+    parallel-fastq-dump -s ${1}.sra -t $2 -O $3 --tmpdir $3 --split-3 --gzip && rm ${1}.sra
   else
     echo '[ERROR]' $1 'apparently not successfully loaded' && exit 1
   fi
