@@ -26,6 +26,10 @@
 # Caution: the double of the value given in threads will be used due to parallel
 # ListOfIds.txt: your file with SRA Identifiants to download, one file by raw
 
+# initialize variables
+input_file=""
+output_file=""
+verbose=0
 
 usage="$(basename "$0") 
 -- download SRA files faster using parallel programs --
@@ -38,16 +42,16 @@ where:
     -t  number of threads to use
     -o  path to output directory"
 
-while getopts ':hfto:' option; do
-  case "$option" in
+while getopts ':hf:t:o:' opt; do
+  case "$opt" in
     h) echo "$usage"
        exit
        ;;
-    f) filen=$1
+    f) f=${OPTARG}
        ;;
-    t) threads=$2
+    t) t=${OPTARG}
        ;;
-    o) outdir=$3
+    o) o=${OPTARG}
        ;;
     :) printf "missing argument for -%f\n" "$OPTARG" >&2
        echo "$usage" >&2
@@ -63,27 +67,35 @@ shift $((OPTIND - 1))
 
 
 # default options
-option=${2:-3}
-option=${3:-./}
+#option=${2:-4}
+#option=${3:-./}
+
+
+# Counting total number of arguments
+#echo "Total number of arguments : $#"
+# Reading argument values individually
+echo "File path : $f"
+echo "Number of threads : $t"
+echo "Output path : $o"
 
 
 function fline {
-  cat $1 | parallel -j 2 "FastDump {}"
+  cat $f | parallel -j 2 "FastDump {}"
 }; export -f fline
 
 
 function FastDump {
-  prefetch -O ./ -X 999999999 $1
+  prefetch -O ./ -X 999999999 $f
 
-  if [[ -e ${1}.sra ]]; then
-    parallel-fastq-dump -s ${1}.sra -t $2 -O $3 --tmpdir ./ --split-3 --gzip && rm ${1}.sra
+  if [[ -e ${f}.sra ]] ; then
+    parallel-fastq-dump -s ${f}.sra -t $t -O $o --tmpdir ./ --split-3 --gzip && rm ${f}.sra
   else
-    echo '[ERROR]' $1 'apparently not successfully loaded' && exit 1
+    echo '[ERROR]' $f 'apparently not successfully loaded' && exit 1
   fi
 }; export -f FastDump
 
 
-fline $1
+fline $f
 
 #######################################################################
 #END
