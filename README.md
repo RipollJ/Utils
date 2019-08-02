@@ -34,6 +34,9 @@ There are two solutions:
 
 Usage: ''' rsync -r path/source path/destination '''
 
+Run rsync with the -n switch to see what what would be transferred without copying data. 
+Adding -q will suppress regular output, only displaying files that could not be transferred.
+
 I prefer rsync because I don't need all files in one of the two computers (to gain space).
 
 
