@@ -27,6 +27,15 @@ IDs more quickly than using fastq-dump.
 LoadSRAv2.sh uses GNU parallel and doubles processes, caution.
 
 
+### Synchronisation between two computers or a computer and an external hard-disk
+There are two solutions:
+- Rsync: unilateral transfer between computer and other (hosted on conda)
+- Unison: bilateral transfer between computer and other (not hosted on conda)
+
+Usage: ''' rsync -r path/source path/destination '''
+
+I prefer rsync because I don't need all files in one of the two computers (to gain space).
+
 
 ### Others
 
