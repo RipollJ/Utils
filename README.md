@@ -39,6 +39,11 @@ Adding -q will suppress regular output, only displaying files that could not be 
 
 I prefer rsync because I don't need all files in one of the two computers (to gain space).
 
+### R parser
+Several packages exist to parse Rscript for execution in the shell.
+Here I choose 3 packages, 2 adapted from python (optparse and argparse) and 1 specific to R (argparser).
+
+Others packages that you can test: getopt (C-like getopt behavior), docopt (it's a port a docopt.py), minimist (JavaScript library) & optigrab (GNU-, Java- or Microsoft- style syntaxes supported)
 
 ### Others
 
