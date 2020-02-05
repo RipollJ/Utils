@@ -85,7 +85,7 @@ function fline {
 
 
 function FastDump {
-  prefetch -O ./ -X 999999999 $f
+  prefetch -O ./ --max-size 100G $f
 
   if [[ -e ${f}.sra ]] ; then
     parallel-fastq-dump -s ${f}.sra -t $t -O $o --tmpdir ./ --split-3 --gzip && rm ${f}.sra
