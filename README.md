@@ -49,11 +49,9 @@ Here I choose 3 packages, 2 adapted from python (optparse and argparse) and 1 sp
 Others packages that you can test: getopt (C-like getopt behavior), docopt (it's a port a docopt.py), minimist (JavaScript library) & optigrab (GNU-, Java- or Microsoft- style syntaxes supported)
 
 
-### Pipeline tools
+### IFB cluster
 
-For a curated list of awesome pipeline toolkits inspired by Awesome Sysadmin, look at this git:
-
-https://github.com/pditommaso/awesome-pipeline
+A brief summary of how to manage your IFB cluster account (IFB_cluster.md).
 
 
 ### Others
