@@ -53,6 +53,19 @@ Others packages that you can test: getopt (C-like getopt behavior), docopt (it's
 
 A brief summary of how to manage your IFB cluster account (IFB_cluster.md).
 
+### Concatenate Fastq files
+
+Aim: Merge/Concatenate fastq files split over lanes
+
+```shell
+    # Ex. 3 samples (id1, id2, id3), paired end (R1, R2), split over four lanes (L001, L002, L003, L004).
+    #for test: 
+    touch id{1,2,3}_L00{1,2,3,4}_R{1,2}_001.fastq.gz
+    ls *.fastq.gz
+   chmod +x mergeFastq.sh
+   # execution 
+   ./mergeFastq.sh -p path -e conditions [ paired | single ]
+```
 
 ### Others
 
