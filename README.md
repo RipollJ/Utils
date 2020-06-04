@@ -2,7 +2,6 @@
 These scripts are provided as is.
 
 
-
 ### Ubuntu in Windows 10 help
 
 This is a small guideline tool to install bash ubuntu on Windows 10
@@ -12,11 +11,9 @@ with conda and snakemake installations
 and gedit visualisation (you can choose an other editor, i.e. vim or emacs)
 
 
-
 ### Update of R version
 
 If you want to update your R version and don't loose all your installed packages
-
 
 
 ### Download SRA files quickly
@@ -58,13 +55,13 @@ A brief summary of how to manage your IFB cluster account (IFB_cluster.md).
 Aim: Merge/Concatenate fastq files split over lanes
 
 ```shell
-    # Ex. 3 samples (id1, id2, id3), paired end (R1, R2), split over four lanes (L001, L002, L003, L004).
-    #for test: 
-    touch id{1,2,3}_L00{1,2,3,4}_R{1,2}_001.fastq.gz
-    ls *.fastq.gz
-   chmod +x mergeFastq.sh
-   # execution 
-   ./mergeFastq.sh -p path -e conditions [ paired | single ]
+ # Ex. 3 samples (id1, id2, id3), paired end (R1, R2), split over four lanes (L001, L002, L003, L004).
+ #for test: 
+ touch id{1,2,3}_L00{1,2,3,4}_R{1,2}_001.fastq.gz
+ ls *.fastq.gz
+ chmod +x mergeFastq.sh
+ # see help to view required options
+ ./mergeFastq.sh -h
 ```
 
 ### Others
