@@ -3,7 +3,9 @@
 - Author: JR
 - Date: 2020-05-20
 
---------------------------------------------------------------
+A brief summary of how to manage your IFB cluster account (IFB_cluster.md).
+
+---
 
 # Table of contents
 
@@ -26,7 +28,7 @@
     - [SLURM](#slurm)
     - [Snakemake](#snakemake)
 
-----------------------------------------------------------------
+---
 
 ## Info
 
@@ -41,7 +43,7 @@ https://www.france-bioinformatique.fr/fr/cluster
 
 Before trying to run any jobs you will need a project and you can request one here: https://my.cluster.france-bioinformatique.fr
 
---------------------------------------------------------------
+---
 
 ## Accessibility and support community
 
@@ -57,7 +59,7 @@ If you need some help for (question, support, installation, tools or params), pl
 
 [<small>[top↑]</small>](#)
 
----------------------------------------------------------------
+---
 
 ## Quick start
 
@@ -69,19 +71,19 @@ https://ifb-elixirfr.gitlab.io/cluster/doc/quick-start/
 
 Several volumes of data storage are available on the NNCR cluster. Use it knowingly.
 
-| Path             | Usage                                         | Quota (default) | Backup policy |
-| ---------------- | --------------------------------------------- | --------------- |---------------|
-| /shared/home     | Home directory (personnal data)               | 200GB *         | NA            |
-| /shared/projects | Scientific and project (common data)          | 500GB           | NA            |
-| /shared/bank     | Read-Only. common banks (UniProt, RefSeq, ...)|                 |               |
+| Path             | Usage                                          | Quota (default) | Backup policy |
+| ---------------- | ---------------------------------------------- | --------------- | ------------- |
+| /shared/home     | Home directory (personnal data)                | 200GB \*        | NA            |
+| /shared/projects | Scientific and project (common data)           | 500GB           | NA            |
+| /shared/bank     | Read-Only. common banks (UniProt, RefSeq, ...) |                 |               |
 
-* note: due to covid19, home size can be reduced, like it was the case for the project space which diminished from 1 To to 500 G.
+- note: due to covid19, home size can be reduced, like it was the case for the project space which diminished from 1 To to 500 G.
 
 [Info on public bank](https://ifb-elixirfr.gitlab.io/cluster/doc/banks/)
 
 [<small>[top↑]</small>](#)
 
----------------------------------------------------------------
+---
 
 ## Install and environment management
 
@@ -100,7 +102,7 @@ Use singularity module
 
 [<small>[top↑]</small>](#)
 
-----------------------------------------------------------------
+---
 
 ## Job submission
 

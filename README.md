@@ -1,28 +1,28 @@
-## Utils
-These scripts are provided as is.
+# Utils
+----------------------------------------------------
+
+Here, you can find some scripts and documentation to help you with different process:
+- Ubuntu WSL documentation for windows 10 [ubuntu-in-windows-10-help.sh](https://github.com/RipollJ/Utils/blob/master/doc/ubuntu-in-windows-10-help.sh)
+- Update of R without loss of your installed packages [Re_Install_R.R](https://github.com/RipollJ/Utils/blob/master/src/Re_Install_R.R)
+- Automatic download of SRA files [LoadSRAv2.sh](https://github.com/RipollJ/Utils/blob/master/src/LoadSRAv2.sh)
+- R parser [parser.R](https://github.com/RipollJ/Utils/blob/master/src/parser.R)
+- IFB core cluster use [IFB_cluster.md](https://github.com/RipollJ/Utils/blob/master/doc/IFB_cluster.md)
+- Merge of fastq files [mergeFastq.sh](https://github.com/RipollJ/Utils/blob/master/src/mergeFastq.sh)
+- Git command [git_command.md](https://github.com/RipollJ/Utils/blob/master/doc/git_command.md)
+- Bioconda recipes [Adding_Bioconda_recipes.md](https://github.com/RipollJ/Utils/blob/master/doc/Adding_Bioconda_recipes.md)
 
 
-### Ubuntu in Windows 10 help
+All these informations are provided as is, without garanty.
 
-This is a small guideline tool to install bash ubuntu on Windows 10
+[LICENSE](https://github.com/RipollJ/Utils/blob/master/LICENSE.md) terms are in agreement with GNUv3 License.
 
-with conda and snakemake installations
+See: https://www.fsf.org/
 
-and gedit visualisation (you can choose an other editor, i.e. vim or emacs)
+[<small>[top↑]</small>](#)
 
+------------------------------------------------------
 
-### Update of R version
-
-If you want to update your R version and don't loose all your installed packages
-
-
-### Download SRA files quickly
-
-LoadSRA.sh bash script allows you to download SRA files according to a list of 
-IDs more quickly than using fastq-dump.
-
-LoadSRAv2.sh uses GNU parallel and doubles processes, caution.
-
+## Other help
 
 ### Synchronisation between two computers or a computer and an external hard-disk
 
@@ -35,37 +35,11 @@ Usage: ''' rsync -r path/source path/destination '''
 Run rsync with the -n switch to see what what would be transferred without copying data. 
 Adding -q will suppress regular output, only displaying files that could not be transferred.
 
-I prefer rsync because I don't need all files in one of the two computers (to gain space).
 
+### Contributing
 
-### R parser
-
-Several packages exist to parse Rscript for execution in the shell.
-Here I choose 3 packages, 2 adapted from python (optparse and argparse) and 1 specific to R (argparser).
-
-Others packages that you can test: getopt (C-like getopt behavior), docopt (it's a port a docopt.py), minimist (JavaScript library) & optigrab (GNU-, Java- or Microsoft- style syntaxes supported)
-
-
-### IFB cluster
-
-A brief summary of how to manage your IFB cluster account (IFB_cluster.md).
-
-### Concatenate Fastq files
-
-Aim: Merge/Concatenate fastq files split over lanes
-
-```shell
- # Ex. 3 samples (id1, id2, id3), paired end (R1, R2), split over four lanes (L001, L002, L003, L004).
- #for test: 
- touch id{1,2,3}_L00{1,2,3,4}_R{1,2}_001.fastq.gz
- ls *.fastq.gz
- chmod +x mergeFastq.sh
- # see help to view required options
- ./mergeFastq.sh -h
-```
-
-### Others
-
-If you have some request for this section don't hesitate to comment it.
+If you have some request, don't hesitate to contact me.
 
 Enjoy.
+
+[<small>[top↑]</small>](#)
