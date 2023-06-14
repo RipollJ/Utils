@@ -2,14 +2,14 @@
 ----------------------------------------------------
 
 Here, you can find some scripts and documentation to help you with different process:
-- Ubuntu WSL documentation for windows 10 [ubuntu-in-windows-10-help.sh](https://github.com/RipollJ/Utils/blob/master/doc/ubuntu-in-windows-10-help.sh)
-- Update of R without loss of your installed packages [Re_Install_R.R](https://github.com/RipollJ/Utils/blob/master/src/Re_Install_R.R)
-- Automatic download of SRA files [LoadSRAv2.sh](https://github.com/RipollJ/Utils/blob/master/src/LoadSRAv2.sh)
-- R parser [parser.R](https://github.com/RipollJ/Utils/blob/master/src/parser.R)
-- IFB core cluster use [IFB_cluster.md](https://github.com/RipollJ/Utils/blob/master/doc/IFB_cluster.md)
-- Merge of fastq files [mergeFastq.sh](https://github.com/RipollJ/Utils/blob/master/src/mergeFastq.sh)
 - Git command [git_command.md](https://github.com/RipollJ/Utils/blob/master/doc/git_command.md)
+- Update of R without loss of your installed packages [Re_Install_R.R](https://github.com/RipollJ/Utils/blob/master/src/Re_Install_R.R)
+- R parser [parser.R](https://github.com/RipollJ/Utils/blob/master/src/parser.R)
+- Automatic download of SRA files [LoadSRAv2.sh](https://github.com/RipollJ/Utils/blob/master/src/LoadSRAv2.sh)
+- Merge of fastq files [mergeFastq.sh](https://github.com/RipollJ/Utils/blob/master/src/mergeFastq.sh)
+- IFB core cluster use [IFB_cluster.md](https://github.com/RipollJ/Utils/blob/master/doc/IFB_cluster.md)
 - Bioconda recipes [Adding_Bioconda_recipes.md](https://github.com/RipollJ/Utils/blob/master/doc/Adding_Bioconda_recipes.md)
+- Ubuntu WSL documentation for windows 10 [ubuntu-in-windows-10-help.sh](https://github.com/RipollJ/Utils/blob/master/doc/ubuntu-in-windows-10-help.sh)
 
 
 All these informations are provided as is, without garanty.
